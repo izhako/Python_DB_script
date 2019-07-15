@@ -1,0 +1,15 @@
+1. unique values in each column
+
+for col in list(df):
+    print(col, ": ", df[col].unique())
+   
+
+2. df.isnull().sum()
+
+3. df['colour'].value_counts().plot(kind='bar')
+
+import seaborn as sns
+ sns.set(style="darkgrid")
+ titanic = sns.load_dataset("titanic")
+ ax = sns.countplot(x="class", data=titanic)
+
