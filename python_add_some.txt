@@ -46,3 +46,39 @@ plt.show()
 #convert categorical variable into dummy
 df_train = pd.get_dummies(df_train)
 
+ # https://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/
+
+df.groupby('A').sum()
+ df.groupby(['A', 'B']).sum()
+ pd.isna(df1)
+ df1.dropna(how='any')
+ df1 = df.reindex(index=dates[0:4], columns=list(df.columns) + ['E'])
+ df[df.A > 0]
+ df.sort_index(axis=1, ascending=False)
+ df.sort_values(by='B')
+ pd.read_excel('foo.xlsx', 'Sheet1', index_col=None, na_values=['NA'])
+
+#Create a new function:
+def num_missing(x):
+  return sum(x.isnull())
+
+#Applying per column:
+print "Missing values per column:"
+print data.apply(num_missing, axis=0) #axis=0 defines that function is to be applied on each column
+
+#Applying per row:
+print "\nMissing values per row:"
+print data.apply(num_missing, axis=1).head() #axis=1 defines that function is to be applied on each row
+
+
+
+
+events_data[['user_id', 'day', 'timestamps']].drop_duplicates(subsets=['user_id', 'day'])\
+                    .groupby('user_id')['timestamps'].apply(list)\
+                    .apply(np.diff) #diff between 2 values of user - first and last
+
+# union lists rows
+gap_data = pd.Series(np.concatenate(gap_data, axis = 0)
+
+gap_data[gap_data<200].hist()
+gap_data.quintile(0.9)
