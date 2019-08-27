@@ -1,0 +1,87 @@
+--------------------------------------
+#3 esential
+(dowload file to github)
+git init
+git add .
+git commit -m "comment"
+git remote add origin https://github.com/Sokolheavy/tutorial.git
+git push -u origin master
+
+
+(dowload file from github)
+git init
+git add .
+git commit -m "comment"
+git clone https://github.com/Sokolheavy/tutorial.git
+git remote add origin https://github.com/Sokolheavy/tutorial.git
+git push -u origin master
+
+
+git clone https://github.com/Sokolheavy/tutorial.git
+
+(make changes and after commit safe) 
+git add .
+git commit -m "comment"
+git push -u origin master
+
+
+--------------------------------------
+#4-5 basic
+git init
+git add .  --all files
+git add "index.py"  --one special file
+git commit -m
+git remote add origin https://github.com/Sokolheavy/Python_DB_script.git
+git remote set-url origin https://github.com/Sokolheavy/tutorial.git (go to rep
+git push -u origin master
+git clone https://github.com/Sokolheavy/R_function_calc.git
+git status  --cheak changes
+git pull (load all changes
+
+
+--------------------------------------
+# 6 -- Alias (C:\Users\папка_вашего_пользователя\.gitconfig):
+s = status --short
+st = status
+l = log --oneline --graph --decorate --all
+g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
+br = branch
+co = checkout
+
+
+--------------------------------------
+# 7 -- leave to previous commit
+don`t push "add":
+git co -- index.py (delete changes(untill previous commit)
+
+git co . (all files
+
+after push "add":
+git reset index.py
+git co -- index.py
+
+git reset .
+git co .
+
+git reset --hard HEAD^1 (delete changes after 1 commit
+git reset --soft HEAD^1 (delete changes after 1 commit, but changes leave in consol 
+
+---------------------------------------
+# 8 -- git branch
+
+git br   (see all branches
+git co develop (go to the branch develop
+git co -b about (create new branch and go to this branch
+git push --set-upstream origin about (add branch to github
+git co 1d678d6   (go to place with commit that you want
+git br -v   (all commit in this branch
+git br -m "new_name_og_branch" (rename branch
+git br -D name_of_branch (del br
+
+---------------------------------------
+# 9 Gist
+--Gist Extension (download first)
+
+select code+f1
+
+
